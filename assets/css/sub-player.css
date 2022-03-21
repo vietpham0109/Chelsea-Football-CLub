@@ -1,0 +1,44 @@
+#sub-player{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+#sub-player .roler-sub{
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 2em;
+    color: black;
+    font-family: "Chelsea Basis-Bold";
+    margin-left: -3em;
+}
+#sub-player .roler-sub::after{
+    display: block;
+    content: " ";
+    height: 3px;
+    width: 235px;
+    background-color: #2e12a8;
+}
+.position-btn-sub{
+    width: 220px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    margin: 1em;
+    position: relative;
+    overflow: hidden;
+}
+.sub-position-sub{
+    display: flex;
+    width: 100%;
+    justify-content: space-between; 
+    position: relative;
+}
+.role-name-sub{
+    text-align: center;
+}
+.position-btn-sub:hover{
+    cursor: pointer;
+}
+.position-btn-sub:hover .position-img{
+    transform: scale(1.1);
+}

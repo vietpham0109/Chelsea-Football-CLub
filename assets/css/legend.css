@@ -1,0 +1,309 @@
+@font-face {
+    font-family: Chelsea Basis Regular;
+    src: url(./fonts/ChelseaBasis-Medium.woff2);
+}
+@font-face {
+    font-family: Chelsea Basis-Bold ;
+    src: url(./fonts/ChelseaBasis-Bold.woff2);
+}
+/*properties*/
+
+#legend .role{
+    color: white;
+    position: relative;
+    left: 70px;
+    top: -30px;
+}
+#legend .role::after{
+    width: 226px;
+}
+.radio-set input{
+    display: none;   
+}
+.image-items{
+    width: 25%;
+    transition: 1s;
+}
+
+/*=====================
+sub-buton(click to show the large window
+=======================================*/
+.sub-button{
+    display: flex;
+    justify-content: ;
+    justify-content:space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.btn{
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    background-color: rgb(78, 73, 73);
+    overflow: hidden;
+    position: relative;
+}
+.btn {
+    margin: 20px;
+}
+.btn::after{
+    content: " ";
+    display: block;
+    width: 400px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+    position: absolute;
+    bottom: 0;
+}
+.btn-image{
+    width: 100%;
+    transition: 1s;
+}
+.btn-name{
+    position: absolute;
+    font-weight: bold;
+    font-family: "Chelsea Basis-Bold";
+    font-size: 25px;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+    left: 10px;
+}
+.btn-name::before{
+    display: block;
+    content: " ";
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    width: 30%;
+    transition: 1s;
+}
+.btn:hover .btn-name::before{
+    width: 60%;
+}
+.btn:hover {
+    cursor: pointer;
+}
+.btn:hover .btn-image{
+    transform: scale(1.1);
+}
+/*infomatin zoom window*/
+.info-zoom{
+    position: fixed;
+    top: 50%;
+    left: 47%;
+    transform: translate(-42%,-50%);
+    z-index: 995;
+    animation: fadein ease .5s;   
+ }
+ @keyframes fadein{
+    from{
+        
+        opacity: 0;
+    }
+    to{
+        
+        opacity: 1;
+    }
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 990;
+    
+  }
+/*Visual*/
+.background{
+    position: absolute;
+    width: 280px;
+    height: 450px;
+    background-color: #0e3281;
+    border-radius: 10px 0px 0 10px ;
+}
+.image{
+    margin: auto;
+    position: absolute;
+    width: 650px;
+    height: 450px;
+    left: -13rem;
+    z-index: 9;
+    bottom: 0;
+}
+.general-text {
+    z-index: 1100 !important;
+}
+.info-text{
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding-top: 0.5em;
+    padding-left: 17em;
+    top: 76px;
+    left: 28%;
+    width: 900px;
+    height: 450px;
+    background-color: white;
+    z-index: 998;
+}
+.info-bar{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    padding-left: 4em;
+}
+.info-items{
+    flex: 1;
+    padding: 0.5em;
+    background-color: rgb(75, 69, 69);
+    transition: all 0.5s;
+    color: white;
+}
+.info-items:hover{
+    cursor: pointer;
+    background-image: #2e12a8;
+}
+.info-items + .info-items{
+    border-left: 2px white solid;
+}
+.info-items--background{
+    background-color: #2e12a8;
+}
+.info-content{
+    padding-left: 2em;
+    z-index: 2000;
+}
+/*inside items*/
+.legendCup{
+    width: 12%;
+    padding-left: 5px;
+}
+/*general edit*/
+
+.info-general,.info-title{
+    text-transform: none;
+    color: black;
+    animation: fadein ease 1s;
+}
+.legend-name{
+    font-size: 30px;
+    font-weight: bold;
+    padding-top:1rem;
+}
+.legend-birth{
+    padding-top:1.5rem;
+}
+/*Nationality*/
+.nation{
+    margin: 0;
+}
+.nation-image{
+    width: 40px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+.nation-name{
+    position: relative;
+    left: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+/*statics*/
+.statics{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.appearance,.goal{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 5px;
+}
+.general-text{
+    font-style: italic;
+    opacity: 0.7;
+}
+.wrap{
+    margin: 0;
+}
+.toast__times {
+    color: rgb(71, 55, 55);
+    opacity: 0.2;
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+    top: 5%;
+    display: inline;
+    font-size: 20px;
+    box-sizing: content-box;
+    transition: 0.5s;
+    
+  }
+  .toast__times:hover{
+      opacity: 1;
+      cursor: pointer;
+  }
+/*moble*/
+/* @media only screen and (max-width: 46.1875em){
+    body{
+        width: 360px;
+        overflow-x: hidden;
+        
+    }
+    #home{
+        width: 400%;
+        height: 250px;
+        position: relative;
+        overflow: hidden;
+    }
+    .button-set{
+        position: absolute;
+       left: 12.5%;
+       transform: translateX(-50%);
+       bottom: 10px;
+
+    }
+    .image-items{
+        width: 25%;
+    }
+    #legend{
+        width: 100%;
+    }
+    .info-zoom{
+        
+        width: inherit;
+    }
+    .background{
+        width: inherit;
+        position: fixed;
+        top: -350px;
+    }.info-text{
+        width: inherit;
+        position: fixed;
+        top: -100px;
+        left: 0;
+        padding: 0;
+        height: 500px;
+    }
+    .toast__times{
+        position: absolute;
+        left: 0;
+        top: 0px;
+        z-index: 9999;
+        width: 30px;
+    }
+    .btn{
+        margin: 1em 0;
+        width: 150px;
+        height: 150px;
+    }
+    .header{
+        width: 360px;
+        overflow: hidden;
+    }
+}  */

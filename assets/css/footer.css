@@ -1,0 +1,119 @@
+@font-face {
+    font-family: Chelsea Basis-Bold ;
+    src: url(./fonts/ChelseaBasis-Bold.woff2);
+}
+@font-face {
+    font-family: Chelsea Basis Regular;
+    src: url(./fonts/ChelseaBasis-Medium.woff2);
+}
+footer{
+    position: relative;
+    bottom: -150px;
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    margin: 0;
+}
+.sponsor{
+    position: relative;
+    margin: auto;
+    align-items: center;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+footer .contact{
+    position: absolute;
+    display: flex;
+    top: 13%;
+    left: 43%;
+}
+.contact-items{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    padding: 1em;
+    border: solid 2px rgb(255, 255, 255);
+    border-radius: 50%;
+    position: relative;
+    margin: 0 0.5em;
+    transition: 0.5s;
+}
+.contact-items:hover{
+    cursor: pointer;
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+.nav-plantinum {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.nav-plantinum img{
+    display: block;
+    max-width: 100%;
+    width: 250px;
+}
+.nav-gold{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.nav-gold img{
+    width: 150px;
+    opacity: 0.9;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+.sponsor img:hover{
+    cursor: pointer;
+}
+.footer-nav{
+    position: relative;
+    height: 200px;
+    background-color: #001489;
+    padding: 1.875rem 0;
+}
+i{
+    position: absolute;
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%,-50%);
+}
+.contact-text{
+    position: absolute;
+    display: flex;
+    top: 50%;
+    right: 0;
+    left: 0;
+}
+.contact-text-end{
+    text-align: center;
+    margin-top: 10rem;
+}
+.contact-text-end span{
+    text-transform: none;
+    font-weight: 400;
+    font-family: "Chelsea Basis Regular";
+    font-size: .875rem;
+    line-height: 1.71;
+    letter-spacing: .3px;
+}
+.nav-child-tittle{
+    font-family: "Chelsea Basis-Bold";
+    margin: auto;
+    font-size: 18px;
+    text-transform: none;
+    text-align: center;
+    display: block;
+}
+.nav-child-tittle:hover{
+    cursor: pointer;
+    color: #4b5ec5;
+    transition: .5s;
+}

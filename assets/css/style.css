@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+@import url(./first-team.css);
+@import url(./sub-player.css);
+@import url(./manager.css);
+@import url(./kit.css);
+@import url(./legend.css);
+@import url(./footer.css);
+
+html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: inherit;
+    text-transform: uppercase;
+    font-weight: 500;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+/* commom */
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.pull-right{
+    float: right;
+}
+.mt-8{
+    margin-top: 8px !important;
+}
+.mt-16{
+    margin-top: 16px !important;
+}
+.col-third{
+    width: 33.33333333%;
+}   
+.col-half{
+    width: 50%;
+}
+.col-full{
+    width: 100%;
+}
+.text-center{
+    text-align: center !important;
+}
+ul{
+    list-style: none;
+}
+/*main-content*/
+.main-content{
+    position: relative;
+    color: rgb(255, 255, 255);
+    height: 650px;
+    margin: 0em;   
+}
+/*layout*/
+.header{
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    position: fixed;
+    background-color:#1d0b6b ;
+    padding: 10px 2em;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.logo img{
+    width: 40px;
+}
+.option{
+    float: right;
+}
+/*control bar*/
+.control{
+    display: flex;  
+}
+    /*nav-bar*/
+.nav-bar{
+    display: flex;
+    align-items: center;
+    padding-left: 16px; 
+}
+.nav-bar .nav-items{
+    margin-top: 4px;
+    padding-left: 40px;
+}
+/*option bar*/
+.option{
+    display: flex;
+    align-items: center;
+}
+.sign{
+    margin-left: 1.5em;
+    display: flex;
+}
+.sign-items{
+    margin-top: 4px;
+    padding-left: 40px;
+    padding: 0 16px;
+}
+.sign-items+ .sign-items{
+    border-left: solid 1px;
+}
+/*Header effect*/
+.nav-items,.sign-items{
+    text-decoration: none;
+}
+.nav-items::after,.sign-items::after{
+    content: " ";
+    display: block;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 2px;
+    transform: scale(0);
+    transition: all 0.5s;
+}
+.nav-items:hover::after,.sign-items:hover::after{
+     transform: scale(1);
+}
+option{
+    font-weight: bold;
+    background-color: #000;
+}
+/*reference element*/
+
+/*footer*/
+
+/*properties*/
+.hidden{
+    display: none
+}
+.view-content{
+    margin: inherit;
+}
+body{
+    overflow-x: hidden;
+}
+#home, #legend,#manager{
+    width: inherit;
+}
+#legend{
+    background-image: linear-gradient(315deg, #1d2db8 0%, #133e75 60%);
+    margin: 0;
+    overflow: hidden;
+    padding: 3em 0;
+}
+#home{
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    width: inherit;
+    margin-top: 50px;
+    align-items: center;
+    position: relative;
+}
+.radio-image{
+    width: 400%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    max-height: 670px;
+    animation: image-items 15s ease ;
+}
+.image-items{
+    width: 25%;
+    transition: 1.5s;
+}
+@keyframes image-items {
+    10% {margin-left: 0px;}
+    20% {margin-left: -100%;}
+    30% {margin-left: -100%;}
+    40% {margin-left: -100%;}
+    50% {margin-left: -200%;}
+    60% {margin-left: -200%;}
+    70% {margin-left: -300%;}
+    80% {margin-left: -300%;}
+    90% {margin-left: -300%;}
+    100% {margin-left: 0%;}
+}
+.button-set{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform:  translateX(-50%);
+}
+.btn-radio{
+    width: 15px;
+    height: 15px;
+    border: solid rgb(44, 195, 233) 2px;
+    border-radius: 50%;
+    transition: 0.6s;
+}
+.btn-radio:hover{
+    cursor: pointer;
+    background-color: rgb(44, 195, 233);
+}
+.btn-radio + .btn-radio{
+    margin-left: 2em;
+}
+.radio1{
+    margin-left: 0;
+
+}
+.radio2{
+    margin-left: -25%;
+
+}
+.radio3{
+    margin-left: -50%;
+
+}
+.radio4{
+    margin-left: -75%;
+
+}
